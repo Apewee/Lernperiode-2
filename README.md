@@ -17,3 +17,12 @@ Lernpackete für nächstes mal:
 Ich habe mich informiert was für eine App ich machen will und ich werde einen Sportresultats notifier machen , er soll das web nach bestimmten spielen suchen und diese mir automatisch via email schicken
 Ich habe mich auch informiert wie ich das umsetzten soll und in der Dokumentation von c# webcrawlern nachgeschaut
 Ich denke das dieses programm realistisch ist und das ich es schaffen sollte
+
+**23.10.2026**
+
+Ich habe herausgefunden wie man ? anstat "if else if" benutzt.
+Ich habe mich dazu informiert wie man Emails mit C# versendet und dabei die Ganze anleitung von https://dometrain.com/blog/sending-email-with-dotnet/ befolgt.
+
+Lernpacket hausaufgabe:
+
+- simples .NET script schreiben welches eine simple Email an eine bestimmte addresse schickt
