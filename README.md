@@ -11,3 +11,9 @@ Lernpackete für nächstes mal:
 
 - Complete Projekt idee mit genauen anweisungen erstellen und notieren
 - Erste recherche zu dem Projekt erstellen und wie man es umsetzen kann
+
+**22.10.2026**
+
+Ich habe mich informiert was für eine App ich machen will und ich werde einen Sportresultats notifier machen , er soll das web nach bestimmten spielen suchen und diese mir automatisch via email schicken
+Ich habe mich auch informiert wie ich das umsetzten soll und in der Dokumentation von c# webcrawlern nachgeschaut
+Ich denke das dieses programm realistisch ist und das ich es schaffen sollte
