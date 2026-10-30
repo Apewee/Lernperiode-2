@@ -26,3 +26,9 @@ Ich habe mich dazu informiert wie man Emails mit C# versendet und dabei die Ganz
 Lernpacket hausaufgabe:
 
 - simples .NET script schreiben welches eine simple Email an eine bestimmte addresse schickt
+
+
+**26.10.2026**
+(Uploaded am 30.10.2026 weil ich vergessen habe changes zu commiten)
+Ich habe genau dieses script geschrieben welches eine simple email macht mit einer simplen nachricht man muss jedoch immer noch einen privaten email host server auf dem eigenen laptop einrichten welches ich am nächsten mache 
+(File name ist :
