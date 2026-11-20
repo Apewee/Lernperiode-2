@@ -19,7 +19,7 @@ Ich habe herausgefunden wie man ? anstatt "if else if" benutzt.
 Ich habe mich dazu informiert wie man Emails mit C# versendet und dabei die Ganze anleitung von https://dometrain.com/blog/sending-email-with-dotnet/ befolgt.
 
 Lernpacket hausaufgabe:
-- simples .NET script schreiben welches eine simple Email an eine bestimmte addresse schickt
+- simples .NET script schreiben welche eine simple Email an eine bestimmte addresse schickt
 
 **26.10.2026** (Uploaded am 30.10.2026 weil ich vergessen habe changes zu commiting)
 Ich habe genau dieses script geschrieben welches eine simple email macht mit einer simplen nachricht man muss jedoch immer noch einen privaten email host server auf dem eigenen laptop einrichten welches ich am nächsten mache
@@ -44,7 +44,7 @@ Lernpackete für nächstesmal:
 - Fehlerbehandlung wenn die Seite nicht erreichbar ist
 
 Lernpacket hausaufgabe:
-- simples .NET script schreiben welches ein Resultat aus einem HTML-String parst
+- simples .NET script schreiben welches ein Resultat aus einem HTML-String parses
 (File name ist : ParseResult.cs)
 
 **05.11.2026**
@@ -70,27 +70,28 @@ Lernpacket hausaufgabe:
 
 ---
 
-## Project Status
+## Projektstatus
 
-The project has been enhanced with the following improvements:
+Die folgenden Verbesserungen wurden vorgenommen:
 
-### SportsNotifier.cs — Major refactoring
-- **Multiple game support**: Configured multiple sports via `SportConfig` records (Football, Basketball extensible)
-- **Error handling**: Try/catch around each sport fetch, individual failures don't crash the whole run
-- **Structured output**: Results dictionary collected before sending single email
-- **Timestamped logging**: Start and completion timestamps in console output
-- **Modular design**: `SendEmailAsync` extracted as reusable method
+### SportsNotifier.cs — Große Refaktion
+- **Mehrere Spiele**: `SportConfig`-Record mit Name, URL, Regex-Muster; vorconfigured Football und Basketball (erweiterbar)
+- **Fehlerbehandlung**: Try/catch pro Sport-Fetch — individuelle Fehler stürzen den ganzen Lauf nicht
+- **Strukturiertes Output**: Results dictionary gesammelt vor senden einer Email
+- **Modulares Design**: `SendEmailAsync` als wiederverwendbare Methode extrahiert
+- **Timestamped Logging**: Start- und End-Zeitstempel in Console-Output
+- **Namespace**: `SportsNotifier` um `Program` Klasse
 
-### Architecture
-The notifier now follows a clean flow:
-1. Iterate over configured sports (`SportConfig` records with Name, URL, Regex pattern)
-2. Fetch each page via `HttpClient`
-3. Parse results with individual regex patterns
-4. Collect all results, send one email with all results
-5. Error handling per sport prevents total failure
+### Architektur
+Der Notifier folgt nun einem sauberen Ablauf:
+1. Über konfigurierte Sports iterieren (`SportConfig` Records mit Name, URL, Regex-Muster)
+2. Jede Seite per `HttpClient` laden
+3. Ergebnisse mit individuellen Regex-Mustern parsen
+4. Alle Results sammeln, eine Email mit allen Results senden
+5. Fehlerbehandlung pro Sport verhindert totalen Absturz
 
-### Pending (from learning notes)
-- [ ] Add Timer/Cron for regular execution (`Regelmässig automatisch laufen lassen`)
-- [ ] Extend regex patterns for specific sports websites (`Mehrere Spiele unterstützen`)
+### Offene Punkte aus den Lernnotizen
+- [ ] Timer/Cron für regelmäßige Ausführung hinzufügen (`Regelmässig automatisch laufen lassen`)
+- [ ] Regex-Muster für spezifische Sport-Websites erweitern (`Mehrere Spiele unterstützen`)
 
-The individual learning files (`FetchSportsPage.cs`, `ParseResult.cs`, `SendEmail.cs`, `SendResultEmail.cs`) remain as reference for the step-by-step learning journey.
+Die individuellen Lernfiles (`FetchSportsPage.cs`, `ParseResult.cs`, `SendEmail.cs`, `SendResultEmail.cs`) bleiben als Referenz für den schrittweisen Lernweg erhalten.
