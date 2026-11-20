@@ -74,24 +74,24 @@ Lernpacket hausaufgabe:
 
 Die folgenden Verbesserungen wurden vorgenommen:
 
-### SportsNotifier.cs — Große Refaktion
-- **Mehrere Spiele**: `SportConfig`-Record mit Name, URL, Regex-Muster; vorconfigured Football und Basketball (erweiterbar)
-- **Fehlerbehandlung**: Try/catch pro Sport-Fetch — individuelle Fehler stürzen den ganzen Lauf nicht
-- **Strukturiertes Output**: Results dictionary gesammelt vor senden einer Email
+### SportsNotifier.cs — Große Überarbeitung
+- **Mehrere Spiele**: `SportConfig`-Record mit Name, URL, Regex-Muster; vorkonfiguriert: Football und Basketball (erweiterbar)
+- **Fehlerbehandlung**: Try/catch pro Sport-Abruf — individuelle Fehler stürzen den ganzen Lauf nicht
+- **Strukturiertes Ergebnis**: Ergebnisse in einem Dictionary gesammelt, bevor eine einzige Email versendet wird
 - **Modulares Design**: `SendEmailAsync` als wiederverwendbare Methode extrahiert
-- **Timestamped Logging**: Start- und End-Zeitstempel in Console-Output
-- **Namespace**: `SportsNotifier` um `Program` Klasse
+- **Zeitstempel-Logging**: Start- und End-Zeitstempel in der Konsolenausgabe
+- **Namespace**: `SportsNotifier` um die `Program`-Klasse
 
 ### Architektur
 Der Notifier folgt nun einem sauberen Ablauf:
-1. Über konfigurierte Sports iterieren (`SportConfig` Records mit Name, URL, Regex-Muster)
+1. Über konfigurierte Sportarten iterieren (`SportConfig`-Records mit Name, URL, Regex-Muster)
 2. Jede Seite per `HttpClient` laden
 3. Ergebnisse mit individuellen Regex-Mustern parsen
-4. Alle Results sammeln, eine Email mit allen Results senden
-5. Fehlerbehandlung pro Sport verhindert totalen Absturz
+4. Alle Ergebnisse sammeln und eine Email mit allen Ergebnissen senden
+5. Fehlerbehandlung pro Sportart verhindert einen totalen Absturz
 
 ### Offene Punkte aus den Lernnotizen
-- [ ] Timer/Cron für regelmäßige Ausführung hinzufügen (`Regelmässig automatisch laufen lassen`)
+- [ ] Timer/Cron für regelmässige Ausführung hinzufügen (`Regelmässig automatisch laufen lassen`)
 - [ ] Regex-Muster für spezifische Sport-Websites erweitern (`Mehrere Spiele unterstützen`)
 
-Die individuellen Lernfiles (`FetchSportsPage.cs`, `ParseResult.cs`, `SendEmail.cs`, `SendResultEmail.cs`) bleiben als Referenz für den schrittweisen Lernweg erhalten.
+Die individuellen Lerndateien (`FetchSportsPage.cs`, `ParseResult.cs`, `SendEmail.cs`, `SendResultEmail.cs`) bleiben als Referenz für den schrittweisen Lernweg erhalten.
